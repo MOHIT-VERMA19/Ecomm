@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 .navbar {
-    background-color: #333; // Grey color for navbar
+    font-family: 'Lato', sans-serif; // Apply Lato font to navbar
+    background-color: #2F302C;
+    ; // Grey color for navbar
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,10 +19,16 @@
     .logo {
       font-size: 1.5rem;
       font-weight: bold;
-      margin-right: 100px;
-      margin-left: 20px;
+      margin-right: 9vh;
+      margin-left: 0px;
+      width: 100%;
     }
-  
+    .logoImg{
+      width: 25px; /* Adjust width as needed */
+      height: 25px; /* Adjust height as needed */
+      margin-right: 10px; /* Adjust margin as needed */
+    }
+    
     ul {
       list-style: none;
       display: flex;
@@ -27,12 +37,49 @@
     }
   
     li {
-      margin-right: 85px;
+      margin-right: 50px;
       font-size: 0.9rem; 
       a {
         color: white; // Set color to white
         text-decoration: none; // Remove underline from links
       }
+      &:hover a {
+        color: skyblue; // Change color to sky blue on hover
+      }
+
+      &.more {
+        position: relative;
+        cursor: pointer;
+  
+        ul {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: #333;
+          display: none;
+          padding: 10px;
+          border-radius: 5px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+          li {
+            margin: 5px 0;
+            a {
+              color: white;
+              text-decoration: none;
+  
+              &:hover {
+                color: #333;
+                background-color: white;
+              }
+            }
+          }
+        }
+  
+        &:hover ul {
+          display: block;
+        }
+      }
+    
     }
   
     .hidden-items {
@@ -50,6 +97,8 @@
     }
   
     .right {
+      display: flex; /* Added flex display to align search bar */
+      align-items: center;
         .search-bar {
           position: relative; // Position the search bar container relative
           display: flex;
