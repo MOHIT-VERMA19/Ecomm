@@ -1,0 +1,85 @@
+.navbar {
+    background-color: #333; // Grey color for navbar
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    height: 8vh;
+  
+    .left {
+      display: flex;
+      align-items: center;
+    }
+  
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-right: 100px;
+      margin-left: 20px;
+    }
+  
+    ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+  
+    li {
+      margin-right: 85px;
+      font-size: 0.9rem; 
+      a {
+        color: white; // Set color to white
+        text-decoration: none; // Remove underline from links
+      }
+    }
+  
+    .hidden-items {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      z-index: 1;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .more:hover .hidden-items {
+      display: block;
+    }
+  
+    .right {
+        .search-bar {
+          position: relative; // Position the search bar container relative
+          display: flex;
+          align-items: center;
+    
+          .search-icon {
+            width: 12px; // Adjust the size of the search icon
+            margin-right: 10px; // Adjust margin as needed
+            position: absolute; // Position the search icon absolute
+            top: 2px; // Adjust position to be above the underline
+            left: 0; // Position the search icon at the left of the search bar
+            filter: invert(1); // Invert the color to white
+
+
+        }
+    
+          .search-input {
+            border: none;
+            border-bottom: 1px solid white; // White underline
+            background-color: transparent; // Remove input background
+            color: white; // Set text color to white
+            padding-left: 20px; // Adjust padding-left to accommodate the icon
+            padding-bottom: 10px;
+            // padding-right: 10px;
+            top: -3px;
+            width: 40vh; // Make input occupy the remaining space
+
+          }
+          
+        }
+      }
+  }
+  
